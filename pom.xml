@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.eks</groupId>
+    <artifactId>eks_common_demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <java.version>1.8</java.version><!--java的编译级别,默认为1.6-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><!-- 文件拷贝时的编码 -->
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding><!-- 文件拷贝时的编码 -->
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding><!-- 编译时的编码 -->
+        <maven.compiler.source>1.8</maven.compiler.source><!-- maven-compiler-plugin编译时使用的JDK版本 -->
+        <maven.compiler.target>1.8</maven.compiler.target><!-- maven-compiler-plugin编译时使用的JDK版本 -->
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.28.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
+        </dependency>
+        <!--免去书写get、set等方法-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <scope>provided</scope><!--依赖范围。在项目发布过程中，帮助决定哪些构件被包括进来。欲知详情请参考依赖机制。[compile:默认范围,用于编译][provided：类似于编译，但支持你期待jdk或者容器提供，类似于classpath][runtime:在执行时需要使用][test:用于test任务时使用][system:需要外在提供相应的元素。通过systemPath来取得][systemPath:仅用于范围为system。提供相应的路径][optional:当项目自身被依赖时，标注依赖是否传递。用于连续依赖时使用-->
+        </dependency>
+        <!--JSCH是一个纯粹的用java实现SSH功能的java  library. 官方地址为：http://www.jcraft.com/jsch/-->
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>0.1.54</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.26</version>
+        </dependency>
+        <!-- 阿里巴巴的fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.58</version>
+        </dependency>
+        <!--jackson-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.9.1</version>
+        </dependency>
+        <!--提取汉字的拼音-->
+        <dependency>
+            <groupId>com.belerweb</groupId>
+            <artifactId>pinyin4j</artifactId>
+            <version>2.5.1</version>
+        </dependency>
+        <!--操作xls等-->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.17</version>
+        </dependency>
+    </dependencies>
+</project>
